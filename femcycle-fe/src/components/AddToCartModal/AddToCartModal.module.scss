@@ -1,0 +1,94 @@
+.text-common {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 29px;
+    color: #151875;
+  }
+  
+  .text-description {
+    font-family: "Josefin Sans";
+    font-size: 16px !important;
+    line-height: 29px;
+    color: #a9acc6;
+  }
+  
+  .initial-price {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 29px;
+    text-transform: capitalize;
+    color: #151875;
+  }
+  .discounted-price {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 29px;
+    text-decoration-line: line-through;
+    text-transform: capitalize;
+    color: #fb2e86;
+    padding: 5px;
+  }
+  
+  .text-1 {
+    font-family: "Josefin Sans";
+    font-size: 36px !important;
+    line-height: 42px;
+  
+    color: #0d134e;
+  }
+  .top {
+    background: #ffffff;
+    // box-shadow: 0px 0px 25px 10px #f6f4fd;
+    border-radius: 2px;
+    padding: 20px 30px;
+    margin-top: 2rem;
+    position: relative;
+  }
+  
+  .add_to_cart{
+    background-color: #fb2e86 !important;
+    border-radius: 2px;
+    font-family: "Josefin Sans" !important;
+    font-size: 17px !important;
+    line-height: 20px !important;
+    letter-spacing: 0.02em !important;
+    color: #ffffff;
+  }
+  .add_to_cart:hover, .add_to_cart:active {
+    background-color: #fb2e86 !important;
+    border-radius: 2px;
+    font-family: "Josefin Sans";
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+  .close-btn{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  .close-btn:hover{
+    cursor: pointer;
+  }
+
+  .box-quantity{
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .plus, .minus{
+    height: 2rem;
+    width: 2rem;
+    background-color: #EEEFFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .plus:hover, .minus:hover{
+    cursor: pointer;
+  }

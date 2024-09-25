@@ -1,0 +1,63 @@
+.base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  .parent {
+    @extend .base;
+    flex-direction: column;
+    .img {
+      @extend .base;
+      background-color: #f5f6f8;
+      height: 15.25rem;
+      .trending-image{
+        max-height: 12rem;
+        max-width: 11rem;
+        padding: 10px;
+      }
+    }
+    .name {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      color: #151875;
+    }
+    .price {
+      display: flex;
+      gap: 10px;
+      .discounted {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #151875;
+      }
+      .initial {
+        font-family: "Josefin Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        text-decoration-line: line-through;
+        color: rgba(21, 24, 117, 0.3);
+      }
+    }
+  }
+  .parent:hover{
+    cursor: pointer;
+  }
+}

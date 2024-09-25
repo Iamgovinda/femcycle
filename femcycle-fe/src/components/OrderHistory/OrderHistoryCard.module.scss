@@ -1,0 +1,59 @@
+.profile-info-main{
+    background-color: #eeeffb;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+.profile-info-title{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    color: #373d57;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    padding: 3% 5%;
+    position: relative;
+    .text-view-all-orders{
+        position:absolute !important;
+        right: 10px;
+        bottom: 10px;
+        color: #FB2E86;
+        font-size: 12px;
+        font-weight: 700;
+        vertical-align: middle;
+        cursor: pointer;
+    
+    }
+}
+
+
+.info{
+    margin-left: 1.5rem !important;
+}   
+.info-title{
+    p{
+        color: #373d57;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+.view-all{
+    text-align: right;
+}
+
+.table-ceil{
+    font-family: 'Josefin Sans';
+    font-weight: 700 !important;
+    color: #101750;
+    font-size: 1rem !important;
+}
+
+.delete-icon{
+    color: rgb(172, 3, 3);
+    font-size: 1.7rem;
+  }
+  .delete-icon:hover{
+    cursor: pointer;
+  }

@@ -1,0 +1,88 @@
+.snc_parent {
+  background-color: #fff6fb;
+  text-align: left;
+  padding: 2rem;
+  position: relative;
+  height: 270px;
+  width: 20rem;
+}
+.snc_off {
+  font-family: "Josefin Sans";
+  //   margin-left: 2.5rem;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #151875;
+}
+.shop_now {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #fb2e86;
+  margin: 0;
+}
+.snc_bottom {
+  .shop_now_img{
+    height: auto;
+  }
+  //   display: flex;
+  //   justify-content: space-between;
+}
+
+.vc_parent {
+  @extend .snc_parent;
+  background-color: #eeeffb;
+  height: 17rem;
+  
+}
+.vc_off {
+  @extend .snc_off;
+}
+
+.vc_bottom {
+  @extend .snc_bottom;
+  margin-left: 2.5rem;
+}
+.mt_parent {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  gap: 15px;
+  .img_top {
+    background-color: #f5f6f8;
+    height: 4.6rem;
+    width: 6.7rem;
+  }
+  .top {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #151875;
+  }
+  .bottom {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration-line: line-through;
+    color: #151875;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .vc_parent{
+    width: 15rem;
+    .vc_bottom{
+      .vc_image{
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  .snc_parent{
+    width: 15rem;
+  }
+}

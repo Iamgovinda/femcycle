@@ -1,0 +1,64 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F6F8;
+  .icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    .icon {
+      margin-top: 10px;
+      color: #2f1ac4;
+    }
+    .icon:hover{
+      cursor: pointer;
+    }
+  }
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    height: 270px;
+    position: relative;
+    img{
+      max-width: 175px !important;
+      max-height: 175px !important;
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffff;
+    p {
+      font-family: "Josefin Sans";
+      font-size: 16px;
+      line-height: 19px;
+      color: #151875;
+    }
+    .bottom_right {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      gap: 10px;
+      .initial {
+        font-family: "Josefin Sans";
+        font-size: 12px;
+        color: #fb2448;
+        text-decoration: line-through;
+      }
+
+      .current {
+        font-family: "Josefin Sans";
+        font-size: 14px;
+        color: #151875;
+      }
+    }
+  }
+}
+
+.parent:hover, .parent:active, .parent:focus{
+  cursor: pointer;
+}

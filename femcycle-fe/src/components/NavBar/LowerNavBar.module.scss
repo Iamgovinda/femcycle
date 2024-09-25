@@ -1,0 +1,69 @@
+.parent {
+  background-color: white;
+  height: 80px;
+  display: flex;
+  overflow-x: hidden !important;
+  .lowerNavBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 7vw;
+      justify-content: space-between;
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+        .contact-txt{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+    }
+    .toggle {
+      display: none;
+    }
+  }
+}
+
+.common-menu-txt {
+  text-decoration: none;
+  color: black;
+}
+.shop:hover{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 815px) {
+  .parent {
+    font-size: 1vw;
+    // width: 70%;
+  }
+
+  .parent .lowerNavBar {
+    .left {
+      .logo_section {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .menu {
+        display: none;
+      }
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

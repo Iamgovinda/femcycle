@@ -1,0 +1,68 @@
+.table-ceil {
+  font-family: "Josefin Sans";
+  font-size: 20px !important;
+  line-height: 23px;
+
+  color: #1d3178 !important;
+}
+
+.table-cell {
+  font-family: "Josefin Sans";
+  font-size: 14px !important;
+  line-height: 16px;
+
+  color: #15245e !important;
+}
+
+.button-section {
+padding: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .btn, .btn:active, .btn:hover {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    background-color: #fb2e86;
+    height: 2.4375rem;
+    border-radius: 0px;
+
+  }
+
+}
+
+.box-quantity{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.plus, .minus{
+  height: 2rem;
+  width: 2rem;
+  background-color: #EEEFFB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.plus:hover, .minus:hover{
+  cursor: pointer;
+}
+
+.quantity-input{
+  height: 1.5rem;
+  width: 2.5rem;
+}
+
+.delete-icon{
+  color: rgb(172, 3, 3);
+  font-size: 1.7rem;
+}
+.delete-icon:hover{
+  cursor: pointer;
+}

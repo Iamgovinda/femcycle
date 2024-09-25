@@ -1,0 +1,38 @@
+.text-1 {
+  font-family: "Josefin Sans";
+  font-size: 36px;
+  line-height: 48px;
+  /* or 133% */
+
+  /* Text */
+
+  color: #151875;
+}
+
+.text-common {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #8a8fb9 !important;
+}
+
+.text-field {
+  input {
+    height: 8rem !important;
+  }
+}
+
+.btn,
+.btn:hover,
+.btn:active {
+  background-color: #fb2e86 !important;
+  border-radius: 3px;
+  color: white !important;
+}
+
+.contact-us-img{
+  height: auto;
+  width: 100%;
+}

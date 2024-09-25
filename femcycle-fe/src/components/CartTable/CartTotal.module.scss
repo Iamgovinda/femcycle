@@ -1,0 +1,79 @@
+.stack-element {
+  background-color: #f4f4fc;
+  padding: 2rem;
+}
+
+.stack-texts-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e8e6f1;
+  span {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #15245e;
+  }
+}
+
+.cart-topic {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #1d3178;
+  font-weight: 700;
+}
+
+.stack-confirmation {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.btn {
+  background-color: #19d16f !important;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.icon{
+    color: #19d16f !important;
+
+}
+
+.modal-btn-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-btn{
+  background-color: #fb2e86 !important;
+  border-radius: 2px !important;
+  font-family: "Josefin Sans";
+  font-size: 16px !important;
+  color: #ffffff;
+  height: 44px;
+}
+
+.modal-btn:hover, .modal-btn:hover{
+  background-color: #fb2e86 !important;
+  border-radius: 2px !important;
+  font-family: "Josefin Sans";
+  font-size: 16px !important;
+  color: #ffffff;
+  height: 44px;
+}
+
+.modal-title{
+  font-family: "Josefin Sans" !important;
+  font-size: 1.5rem;
+  padding: 0px 0px 8px 0px;
+}

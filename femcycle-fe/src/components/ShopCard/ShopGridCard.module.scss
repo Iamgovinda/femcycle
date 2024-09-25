@@ -1,0 +1,71 @@
+.parent:hover, .parent:active{
+  cursor: pointer;
+}
+.shop-image-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  background-color: #ebf4f3;
+  border: 0px white;
+  box-shadow: none;
+}
+
+.text-parent {
+    box-shadow: none;
+  text-align: center;
+  .text-top {
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #151875;
+  }
+  .text-bottom {
+    .span-1 {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      color: #151875;
+    }
+    .span-2 {
+      font-family: 'Josefin Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      text-decoration-line: line-through;
+      color: #FB2E86;
+      
+      }
+  }
+}
+
+.box-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.5rem;
+
+  .box-1 {
+    background-color: #ec42a2;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+  .box-2 {
+    @extend .box-1;
+    background-color: #de9034;
+  }
+  .box-3 {
+    @extend .box-1;
+    background-color: #8568ff;
+  }
+}

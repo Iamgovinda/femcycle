@@ -1,0 +1,100 @@
+.parent {
+  display: flex !important;
+  flex-direction: column;
+
+  background-color: #f8f8fd;
+  border-radius: 3px;
+  padding: 1rem;
+  gap: 5rem !important;
+}
+
+.parent-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.btn-box{
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  .btn{
+    background-color: #fb2e86;
+    border-radius: 2px;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    color: #ffffff;
+    height: 44px;
+  }
+  
+  .btn:active, .btn:hover{
+    background-color: #fb2e86;
+    border-radius: 2px;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 19px;
+  
+    color: #ffffff;
+    height: 44px;
+  }
+}
+
+.texts-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info-text {
+  font-family: "Josefin Sans";
+  font-size: 18px !important;
+  line-height: 21px;
+
+  color: #1d3178;
+  margin-left: 7px;
+}
+
+.do-you-have-account-text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 17px;
+  /* identical to box height */
+
+  letter-spacing: 0.01em;
+
+  color: #c1c8e1;
+}
+.stack-confirmation {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  span {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+
+    color: #8a91ab;
+  }
+}
+.icon {
+  color: #19d16f !important;
+}
+
+.shipping-address-text {
+  font-family: "Josefin Sans";
+  font-size: 18px !important;
+  line-height: 21px;
+  margin-left: 5px;
+
+  color: #1d3178 !important;
+}
+
+.form-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

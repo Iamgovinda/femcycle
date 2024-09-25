@@ -1,0 +1,59 @@
+.text-top {
+  font-family: "Josefin Sans";
+  font-size: 36px;
+  line-height: 30px;
+  text-align: center;
+  color: #1d3178;
+}
+
+.text-common-1 {
+  font-family: "Josefin Sans";
+  font-size: 17px;
+  line-height: 30px;
+  color: #1d3178;
+}
+
+.text-common-2 {
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  line-height: 30px;
+  color: #a1abcc;
+}
+
+.text-form-top {
+  font-family: "Josefin Sans";
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #1d3178;
+  text-align: left;
+}
+
+.grid-item-2 {
+    margin-top: 3rem;
+  background-color: #f8f8fd;
+  padding: 4rem 3rem 4rem 3rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textfield-message {
+  input {
+    height: 8rem;
+    background-color: white;
+  }
+}
+.textfield-input {
+  input {
+    background-color: white;
+  }
+}
+
+.btn, .btn:hover, .btn:active {
+  background-color: #fb2e86 !important;
+  border-radius: 3px;
+  color: white !important;
+  width: 8rem;
+}

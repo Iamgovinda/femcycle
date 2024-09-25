@@ -1,0 +1,41 @@
+.parent{
+    display: flex;
+    gap: 0;
+    .btn, .btn:hover, .btn:active{
+        background-color: #FB2E86;
+        border-radius: 0;
+        height: 2.4rem;
+        width: 3.1rem;
+    }
+    .txt{
+        color: white;
+        border: 2px solid #E7E6EF;
+        height: 40px;
+        width: 266px;
+        color: black;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .parent{
+        .btn{
+            height: auto;
+            width: 1rem;
+        }
+        .txt{
+            width: 12rem;
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .parent{
+        .txt{
+            width: 8rem;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+$type_one:'#151875';
+.parent {
+  background-color: #f1f0ff;
+  // height: 36rem;
+  min-width: 568px;
+  margin: 4rem 0 4rem 0;
+}
+
+.feature-section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column !important;
+  justify-content: center;
+  .feature-topic {
+    font-family: "Josefin Sans";
+    font-size: 2.1rem;
+    line-height: 3rem;
+    letter-spacing: 0.015em;
+    color: #151875;
+  }
+  .features {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 132%;
+
+    letter-spacing: 0.015em;
+
+    color: #acabc3;
+  }
+
+  .feature-section-items-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .feature-section-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+  }
+  .feature-section-bullet1 {
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: #f52b70;
+  }
+  .feature-section-bullet2 {
+    @extend .feature-section-bullet1;
+    background-color: #2b2bf5;
+  }
+  .feature-section-bullet3 {
+    @extend .feature-section-bullet1;
+    background-color: #2bf5cc;
+  }
+  .btn-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    .name {
+      font-family: "Josefin Sans";
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: $type_one;
+    }
+    .price {
+      font-family: "Lato";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #151875;
+    }
+  }
+}
+
+.img{
+  height: auto;
+  width: 100%;
+}

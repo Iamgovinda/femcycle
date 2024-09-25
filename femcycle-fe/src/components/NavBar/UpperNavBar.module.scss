@@ -1,0 +1,128 @@
+.upperNav {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  .right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .language {
+      display: flex;
+      gap: 0.1rem;
+      align-items: center;
+    }
+    .currency {
+      display: flex;
+      gap: 0.1rem;
+      align-items: center;
+    }
+    .login{
+      @extend .currency;
+      color: white;
+      text-decoration: none;
+      .logout{
+        margin-left: 5px;
+
+      }
+      .logout:hover{
+        cursor: pointer;
+      }
+    }
+    .login:hover{
+      cursor: pointer;
+    }
+    .wishlist{
+      @extend .language;
+      position: relative;
+      .shopping_cart{
+        cursor: pointer;
+      }
+      .cart_count{
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 50%;
+        background-color: red;
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        // right: 0px;
+        // bottom: 3px;
+        margin: 0 0 1rem 2rem; 
+      }
+    }
+  }
+  .left {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    .email {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.parent {
+  background-color: #7e33e0;
+  min-height: 2rem;
+}
+.toggle{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .upperNav {
+    flex-wrap: wrap;
+    justify-content: space-around;    
+    .left{
+      // flex-wrap: wrap;
+      gap: 1rem;
+      .email{
+        gap: 0.25rem;
+      }
+      .phone{
+        gap: 0.25rem;
+      }
+    }
+    .right{
+      // flex-wrap: wrap;
+      .language{
+        gap: 0.05rem;
+      }
+      .currency{
+        gap: 0.05rem;
+      }
+      .login{
+        display: none;
+      }
+      // .wishlist{
+      //   display: none;
+      // }
+      // .shopping_cart{
+      //   display: none;
+      // }
+      // .toggle{
+      //   display: inline;
+      // }
+      
+    }
+
+
+  }
+  .parent{
+    height: 6rem;
+    overflow-x: hidden !important;
+  }
+}

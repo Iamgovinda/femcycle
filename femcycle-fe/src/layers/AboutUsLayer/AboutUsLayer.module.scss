@@ -1,0 +1,48 @@
+.features-top {
+  font-family: "Josefin Sans";
+  font-size: 42px;
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+}
+
+.text-1 {
+  font-family: "Josefin Sans";
+  font-size: 36px;
+  line-height: 48px;
+  /* or 133% */
+
+  /* Text */
+
+  color: #151875;
+}
+
+.text-2 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 160% */
+
+  /* sub text color */
+
+  color: #8a8fb9;
+}
+
+.dummy-image {
+  border: 0px 0px 10px 10px #151875 !important;
+}
+
+.contact, contact:hover, .contact:active {
+  background-color: #fb2e86 !important;
+  border-radius: 3px;
+  color: white !important;
+  width: 145px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

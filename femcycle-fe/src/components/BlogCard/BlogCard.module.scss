@@ -1,0 +1,49 @@
+.top_text {
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #151875;
+}
+.top_text_info {
+    text-align: left;
+    gap: 1.5rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    div{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    span{
+        font-family: "Josefin Sans";
+        font-size: 14px;
+        line-height: 16px;
+        color: #151875;
+        align-items: center;
+    }
+}
+
+.bottom_text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #72718f;
+  text-align: left;
+}
+
+.card_btn,
+.card_btn::hover {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  text-decoration-line: underline;
+  color: #151875;
+}
+
+.card_parent {
+}

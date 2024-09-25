@@ -1,0 +1,26 @@
+.btn,
+.btn:active,
+.btn:hover {
+  background-color: #fb2e86 !important;
+  border-radius: 3px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  font-family: "Josefin Sans";
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.not-found-img {
+  height: auto;
+  width: 100%;
+}

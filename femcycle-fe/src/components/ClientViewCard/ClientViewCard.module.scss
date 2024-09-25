@@ -1,0 +1,59 @@
+.parent {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fbfbff;
+  gap: 1.5rem;
+}
+
+.text-1 {
+  font-family: "Josefin Sans";
+  font-size: 42px !important;
+  line-height: 26px;
+  /* identical to box height, or 61% */
+
+  color: #000000;
+}
+
+.description {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px !important;
+  line-height: 26px;
+  /* or 160% */
+
+  text-align: center;
+
+  /* sub text color */
+
+  color: #8a8fb9;
+  margin: 0rem 15rem !important;
+}
+
+.post {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px !important;
+  line-height: 26px;
+  /* identical to box height, or 256% */
+
+  /* sub text color */
+
+  color: #8a8fb9;
+}
+
+.name {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px !important;
+  line-height: 26px;
+}
+
+.info-box{
+    margin-top: 3rem !important;
+}

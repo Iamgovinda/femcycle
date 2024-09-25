@@ -1,0 +1,88 @@
+
+.parent{
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px 5px rgb(246 246 253 / 50%);
+  padding: 1rem 0.5rem 1rem 0;
+}
+.text-1 {
+  font-family: "Josefin Sans";
+  font-size: 19.8783px;
+  line-height: 23px;
+
+  color: #111c85;
+}
+
+.box-1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #de9034;
+}
+.add-to-cart-icon{
+  cursor: pointer;
+}
+.icon{
+  cursor: pointer;
+}
+
+
+.box-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+
+  .box-1 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #de9034;
+  }
+  .box-2 {
+    @extend .box-1;
+    background-color: #e60584;
+  }
+  .box-3 {
+    @extend .box-1;
+    background-color: #5e37ff;
+  }
+  .price-discounted {
+    font-family: "Josefin Sans";
+    font-size: 15.4609px;
+    line-height: 18px;
+    margin: 0px 10px 0px 0px;
+    color: #111c85;
+  }
+  .price-initial {
+    font-family: "Josefin Sans";
+    font-size: 15.4609px;
+    line-height: 18px;
+    text-decoration-line: line-through;
+    color: #ff2aaa;
+  }
+  .prod-description {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.6696px;
+    line-height: 31px;
+    color: #9295aa;
+  }
+  .icon-box{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 27.6087px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.paper{
+  min-width: 20rem !important;
+  display: flex;
+  max-width: 20rem !important;
+}
