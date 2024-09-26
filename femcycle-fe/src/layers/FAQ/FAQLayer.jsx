@@ -43,23 +43,7 @@ const FAQLayer = () => {
                 <Grid container spacing={4} justifyContent='center' alignItems={'center'} >
                     <Grid item lg={6}>
                         <Stack>
-                            <p className={styles['text-top']}>Generel Information</p>
-                            <Box>
-                                <p className={styles['text-common-1']}>Eu dictumst cum at sed euismood condimentum?</p>
-                                <p className={styles['text-common-2']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed tristique mollis vitae, consequat gravida sagittis.</p>
-                            </Box>
-                            <Box>
-                                <p className={styles['text-common-1']}>Magna bibendum est fermentum eros.</p>
-                                <p className={styles['text-common-2']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed tristique mollis vitae, consequat gravida sagittis.</p>
-                            </Box>
-                            <Box>
-                                <p className={styles['text-common-1']}>Odio muskana hak eris conseekin sceleton?</p>
-                                <p className={styles['text-common-2']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed tristique mollis vitae, consequat gravida sagittis.</p>
-                            </Box>
-                            <Box>
-                                <p className={styles['text-common-1']}>Elit id blandit sabara boi velit gua mara?</p>
-                                <p className={styles['text-common-2']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt sed tristique mollis vitae, consequat gravida sagittis.</p>
-                            </Box>
+                            <p className={styles['text-top']}>You can ask everything without fear.</p>
                         </Stack>
                     </Grid>
                     <Grid item lg={6}>

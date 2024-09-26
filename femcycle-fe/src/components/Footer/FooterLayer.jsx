@@ -23,13 +23,11 @@ const FooterLayer = () => {
 
                     <Grid item md={3}>
                         <Stack gap={4}>
-                            <div className="logo">
-                                <img src={logo} alt="logo" />
-                            </div>
+                            
                             {/* <SearchBar /> */}
                             <div>
                                 <p className={styles['info']}>Contact Info</p>
-                                <p className={styles['info']}>Kalanki, Kathmandu</p>
+                                
                             </div>
                         </Stack>
                     </Grid>

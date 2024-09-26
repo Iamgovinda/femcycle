@@ -18,19 +18,19 @@ const AboutUsLayer = () => {
     const offers = [
         {
             'image': firstOfferImage,
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+            'description': 'Anytime available'
         },
         {
             'image': secondOfferImage,
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+            'description': 'Anytime available'
         },
         {
             'image': thirdOfferImage,
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+            'description': 'Anytime available'
         },
         {
             'image': fourthOfferImage,
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+            'description': 'Anytime available'
         }
     ]
     return (
@@ -44,9 +44,9 @@ const AboutUsLayer = () => {
                         </Grid>
                         <Grid item lg={5} md={8} display={'flex'} direction='column' justifyContent={'space-around'} spacing={1}>
                             <Stack alignItems={'center'}>
-                                <p className={styles['text-1']}>Know About Our Ecomerce
+                                <p className={styles['text-1']}>Know About Our application.
                                     Business, History</p>
-                                <p className={styles['text-2']}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum quam.</p>
+                                <p className={styles['text-2']}>Anytime available</p>
                             </Stack>
                             <Button className={styles['contact']} onClick={()=>navigate('/contact-us')}>Contact Us</Button>
 

@@ -53,10 +53,7 @@ const ContactUsLayer = () => {
                         <Grid item lg={6}>
                             <p className={styles["text-1"]}>Information About us</p>
                             <p className={styles["text-common"]}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis
-                                neque ultrices mattis aliquam, malesuada diam est. Malesuada sem
-                                tristique amet erat vitae eget dolor lobortis. Accumsan faucibus
-                                vitae lobortis quis bibendum quam.
+                                 HELLO
                             </p>
 
                             <Box display={"flex"} gap={1.5}>
@@ -79,7 +76,7 @@ const ContactUsLayer = () => {
                                         <Box>
                                             <p className={styles["text-common"]}>Tel: 877-67-88-99</p>
                                             <p className={styles["text-common"]}>
-                                                E-Mail: shop@store.com
+                                                E-Mail: mensurationdiary@gmail.com
                                             </p>
                                         </Box>
                                     </Box>
@@ -93,7 +90,7 @@ const ContactUsLayer = () => {
                                     >
                                         <Circle height={45} width={45} bg="#FB2E86" />
                                         <Box>
-                                            <p className={styles["text-common"]}>Support Forum</p>
+                                            <p className={styles["text-common"]}>Support </p>
                                             <p className={styles["text-common"]}>For over 24hr</p>
                                         </Box>
                                     </Box>
@@ -110,11 +107,9 @@ const ContactUsLayer = () => {
                                         <Circle height={45} width={45} bg="#FFB265" />
                                         <Box>
                                             <p className={styles["text-common"]}>
-                                                20 Margaret st, London
+                                                Nepal
                                             </p>
-                                            <p className={styles["text-common"]}>
-                                                Great britain, 3NM98-LK
-                                            </p>
+                                           
                                         </Box>
                                     </Box>
                                 </Grid>
@@ -128,9 +123,9 @@ const ContactUsLayer = () => {
                                         <Circle height={45} width={45} bg="#1BE982" />
                                         <Box>
                                             <p className={styles["text-common"]}>
-                                                Free standard shipping
+                                                Free for all.
                                             </p>
-                                            <p className={styles["text-common"]}>on all orders.</p>
+                                           
                                         </Box>
                                     </Box>
                                 </Grid>
@@ -145,9 +140,7 @@ const ContactUsLayer = () => {
                             <Box>
                                 <p className={styles["text-1"]}>Get In Touch</p>
                                 <p className={styles["text-common"]}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Mattis neque ultrices tristique amet erat vitae eget dolor los
-                                    vitae lobortis quis bibendum quam.
+                                     HELLO
                                 </p>
                             </Box>
 

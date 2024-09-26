@@ -47,7 +47,7 @@ export default function LowerNavBar() {
                 <div className={style["left"]}>
                     <div className="logo_section">
                         <Link to={"/"}>
-                            <h1>Fem Cycle</h1>
+                            <h1>Mensuration Diary</h1>
                         </Link>
                     </div>
                     <div className={style["menu"]}>
@@ -57,12 +57,7 @@ export default function LowerNavBar() {
                         </Link>
                     </div>
 
-                    <div className={style["menu"]}>
 
-                        <Link className={style["common-menu-txt"]} to={"/contact-us"}>
-                            Contact Us
-                        </Link>
-                    </div>
                 </div>
 
             </Container>

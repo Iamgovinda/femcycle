@@ -20,19 +20,19 @@ const HomeLayer = () => {
   const offers = [
     {
       'image': firstOfferImage,
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+      'description': ' Every Time Available.'
     },
     {
       'image': secondOfferImage,
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+      'description': 'Every Time Available.'
     },
     {
       'image': thirdOfferImage,
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+      'description': 'Every Time Available.'
     },
     {
       'image': fourthOfferImage,
-      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.'
+      'description': 'Every Time Available.'
     }
   ]
 
@@ -40,7 +40,7 @@ const HomeLayer = () => {
     <>
       <Container>
         <div className={styles["offer_section"]}>
-          <p className={styles["offer_text"]}>What Shopex Offer!</p>
+          <p className={styles["offer_text"]}>Remember when your next period!</p>
           <Grid container alignItems='center' justifyContent='center' spacing={4}>
             {
               offers.map((item, index) => {

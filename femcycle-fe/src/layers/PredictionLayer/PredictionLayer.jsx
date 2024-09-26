@@ -59,9 +59,7 @@ const PredictionLayer = () => {
                                 <Box>
                                     <p className={styles["text-1"]}>Predict Your Mensuration</p>
                                     <p className={styles["text-common"]}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Mattis neque ultrices tristique amet erat vitae eget dolor los
-                                        vitae lobortis quis bibendum quam.
+                                        Available everytime.
                                     </p>
                                 </Box>
 

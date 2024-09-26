@@ -84,11 +84,11 @@ const UpperNavBar = (props) => {
         <div className={styles["left"]}>
           <div className={styles["email"]}>
             <EmailOutlinedIcon fontSize="lg" />
-            <p>contact.hecktoapp@gmail.com</p>
+            <p>contact.mensurationdiary@gmail.com</p>
           </div>
           <div className={styles["phone"]}>
             <LocalPhoneOutlinedIcon fontSize="lg" color="red" />
-            <p>(+977)9813293156</p>
+            <p>(+977)9867055756</p>
           </div>
         </div>
 
