@@ -129,9 +129,15 @@ class UserLoginMeta(TimeStampModel):
         return f'Login meta for user => {self.user.email}'
 
 
-
 from django.db import models
 from femcycle.accounts.models import User
+
+GOOD = "GOOD"
+BAD = "BAD"
+STATUS_CHOICES = (
+    (GOOD, "GOOD"),
+    (BAD, "BAD")
+)
 
 
 # Create your models here.
@@ -147,4 +153,11 @@ class UserData(models.Model):
     total_days_of_fertility = models.IntegerField()
     total_fertility_formula = models.IntegerField(default=0)
     bmi = models.IntegerField(default=0)
+    prediction_date = models.DateField(null=True, blank=True)
+    remaining_days = models.IntegerField(default=0)  # remaining days = predicted_next_ovulation_date - prediction_date
+    predicted_next_ovulation_date = models.DateField(null=True, blank=True)
+    predicted_next_mensuration_date = models.DateField(null=True, blank=True)
+    status = models.CharField(choices=STATUS_CHOICES, default=GOOD, max_length=10)
 
+    def __str__(self):
+        return f"User Data -> {self.user.first_name} -> {self.prediction_date}"

@@ -55,8 +55,11 @@ class UserViewSet(ModelViewSet):
         user = self.get_object()
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
-            serializer.save(user=user)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+            user_data = serializer.save(user=user)
+            return Response({
+                "status": "OK",
+                "predicted_next_ovulation_date": user_data.predicted_next_ovulation_date
+            }, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=True, methods=['get'], url_name='get-user-data', url_path='get-user-data',

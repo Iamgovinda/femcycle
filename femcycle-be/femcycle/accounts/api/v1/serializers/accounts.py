@@ -1,3 +1,6 @@
+import datetime
+
+from django.db.models import Avg
 from rest_framework import serializers
 
 from femcycle.accounts.models import User, UserData
@@ -98,13 +101,34 @@ class UserDataSerializer(DynamicFieldsModelSerializer):
         length_of_luteal = validated_data.get('length_of_luteal')
         total_num_of_high_days = validated_data.get('total_num_of_high_days')
         total_num_of_peak_days = validated_data.get('total_num_of_peak_days')
-        total_days_of_fertility = validated_data.get('total_days_of_fertility')
         bmi = validated_data.get('bmi')
-        total_fertility_formula = validated_data.get('total_fertility_formula')
+        total_days_of_fertility = validated_data.get('total_days_of_fertility')
         length_of_menses = validated_data.get('length_of_menses')
-        next_evolution_date = predictor(age, length_of_cycle, length_of_luteal, total_num_of_high_days,
-                                        total_num_of_peak_days, total_days_of_fertility, bmi, total_fertility_formula,
-                                        length_of_menses)
-        print(next_evolution_date)
+        prediction_date = validated_data.get("prediction_date")
+        remaining_days = predictor(age, length_of_cycle, length_of_luteal, total_num_of_high_days,
+                                   total_num_of_peak_days, total_days_of_fertility, bmi,
+                                   length_of_menses)
+
+        next_ovulation_date = prediction_date + datetime.timedelta(days=remaining_days)
+        next_mensuration_date = prediction_date + datetime.timedelta(days=remaining_days + 14)
+        validated_data["predicted_next_ovulation_date"] = next_ovulation_date
+        validated_data["predicted_next_mensuration_date"] = next_mensuration_date
+        validated_data["remaining_days"] = remaining_days
+
+        if UserData.objects.filter(prediction_date__lte=prediction_date).count() >= 2:
+            print("hello")
+            average_remaining_days = UserData.objects.filter(
+                prediction_date__lte=prediction_date  # Filtering based on prediction_date
+            ).aggregate(
+                average_remaining_days=Avg("remaining_days")  # Aggregating the average of remaining_date
+            ).get("average_remaining_days")  # Getting the result from the dictionary
+            # calculate average difference
+            days_diff = average_remaining_days - remaining_days
+            if days_diff < -10 or days_diff > 10:
+                # out of threshhold range
+                status = "BAD"
+            else:
+                status = "GOOD"
+            validated_data["status"] = status
         user_data = UserData.objects.create(**validated_data)
         return user_data

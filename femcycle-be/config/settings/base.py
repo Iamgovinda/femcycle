@@ -3,10 +3,11 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-PROJECT_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
 ROOT_DIR = os.path.dirname(PROJECT_DIR)
 BASE_DIR = os.path.join(PROJECT_DIR, 'config')
 APPS_DIR = os.path.join(PROJECT_DIR, 'femcycle')
+print(ROOT_DIR, PROJECT_DIR)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -54,8 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [PROJECT_DIR / 'templates']
-        ,
+        'DIRS': [PROJECT_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
