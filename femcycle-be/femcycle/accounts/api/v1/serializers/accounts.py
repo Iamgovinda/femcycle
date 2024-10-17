@@ -96,6 +96,7 @@ class UserDataSerializer(DynamicFieldsModelSerializer):
         read_only_fields = 'id', 'user'
 
     def create(self, validated_data):
+        user = self.user
         age = validated_data.get('age')
         length_of_cycle = validated_data.get('length_of_cycle')
         length_of_luteal = validated_data.get('length_of_luteal')
@@ -115,10 +116,10 @@ class UserDataSerializer(DynamicFieldsModelSerializer):
         validated_data["predicted_next_mensuration_date"] = next_mensuration_date
         validated_data["remaining_days"] = remaining_days
 
-        if UserData.objects.filter(prediction_date__lte=prediction_date).count() >= 2:
-            print("hello")
+        if UserData.objects.filter(prediction_date__lte=prediction_date, user=user).count() >= 2:
             average_remaining_days = UserData.objects.filter(
-                prediction_date__lte=prediction_date  # Filtering based on prediction_date
+                prediction_date__lte=prediction_date,  # Filtering based on prediction_date
+                user = user
             ).aggregate(
                 average_remaining_days=Avg("remaining_days")  # Aggregating the average of remaining_date
             ).get("average_remaining_days")  # Getting the result from the dictionary
