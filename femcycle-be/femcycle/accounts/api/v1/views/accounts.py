@@ -53,7 +53,10 @@ class UserViewSet(ModelViewSet):
             serializer_class=UserDataSerializer)
     def post_user_data(self, request, *args, **kwargs):
         user = self.get_object()
-        serializer = self.serializer_class(data=request.data)
+        serializer = self.serializer_class(data=request.data, context={
+            "request": self.request,
+            "view": self
+        })
         if serializer.is_valid():
             user_data = serializer.save(user=user)
             return Response({
