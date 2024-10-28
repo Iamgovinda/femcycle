@@ -11,6 +11,7 @@ import { post } from "../../API/axios";
 import { toast } from "react-toastify";
 // import { useNavigate } from 'react-router-dom';
 import { useUserContext } from "../../context/UserContext";
+import { calculateAge } from "../../utils/common";
 
 // const phoneRegExp =
 //     /^((\\+[1-9]{1,9}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -18,13 +19,19 @@ const PredictionLayer = () => {
     const { user } = useUserContext();
 
     const schema = yup.object().shape({});
-
+    const defaultValues = {};
+    console.log("default value: ", user);
+    if (user?.dob) {
+        console.log("user.dob: ", user?.dob);
+        defaultValues["age"] = calculateAge(user?.dob);
+    }
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm({
         resolver: yupResolver(schema),
+        defaultValues: defaultValues,
     });
 
     const onSubmit = async (data) => {
@@ -36,11 +43,13 @@ const PredictionLayer = () => {
                 data
             );
             if (response.status === 200 || response.status === 201) {
-                let data = response.data
-                let predicted_next_ovulation_date = new Date(data["predicted_next_ovulation_date"]).toLocaleDateString('en-GB', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric'
+                let data = response.data;
+                let predicted_next_ovulation_date = new Date(
+                    data["predicted_next_ovulation_date"]
+                ).toLocaleDateString("en-GB", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
                 });
                 toast.success(`Next Evulation Date: ${predicted_next_ovulation_date}`);
             } else {
@@ -65,8 +74,8 @@ const PredictionLayer = () => {
                         <Grid container spacing={0} marginTop={15}>
                             <Grid item lg={6} display="flex" flexDirection={"column"} gap={5}>
                                 <Box>
-                                    <p className={styles["text-1"]}>Predict Your Mensuration</p>
-                                    <p className={styles["text-common"]}>Available everytime.</p>
+                                    <p className={styles["text-1"]}>Predict Your Menstruation</p>
+                                    <p className={styles["text-common"]}>Available every time.</p>
                                 </Box>
 
                                 <Grid container spacing={3}>
@@ -78,78 +87,114 @@ const PredictionLayer = () => {
                                             placeholder=""
                                             {...register("age")}
                                         ></TextField>
-                                        <small><i>Your age</i></small>
+                                        <small>
+                                            <i>Your current age</i>
+                                        </small>
                                     </Grid>
                                     <Grid item lg={6} sm={12} md={12}>
                                         <TextField
                                             type="number"
                                             fullWidth
-                                            name={"length_of_cycle"}
                                             label="Cycle Length*"
                                             placeholder=""
                                             {...register("length_of_cycle")}
                                         ></TextField>
-                                        <small><i>Mens Cycle Length</i></small>
+                                        <small>
+                                            <i>Length of your menstrual cycle (in days)</i>
+                                        </small>
                                     </Grid>
                                 </Grid>
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"length_of_menses"}
-                                    label="Mens Length*"
-                                    placeholder=""
-                                    {...register("length_of_menses")}
-                                ></TextField>
 
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"length_of_luteal"}
-                                    label="Luteal Length*"
-                                    placeholder=""
-                                    {...register("length_of_luteal")}
-                                ></TextField>
+                                <div>
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="Menses Length*"
+                                        placeholder=""
+                                        {...register("length_of_menses")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Number of days of menstruation</i>
+                                    </small>
+                                </div>
 
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"total_num_of_high_days"}
-                                    label="Total Number High Days*"
-                                    placeholder=""
-                                    {...register("total_num_of_high_days")}
-                                ></TextField>
+                                <div>
+                                    {" "}
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="Luteal Phase Length*"
+                                        placeholder=""
+                                        {...register("length_of_luteal")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Duration of your luteal phase (in days)</i>
+                                    </small>
+                                </div>
 
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"total_num_of_peak_days"}
-                                    label="Total Number Pick Days*"
-                                    placeholder=""
-                                    {...register("total_num_of_peak_days")}
-                                ></TextField>
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"total_days_of_fertility"}
-                                    label="Total Fertility Days*"
-                                    placeholder=""
-                                    {...register("total_days_of_fertility")}
-                                ></TextField>
-                                <TextField
-                                    type="number"
-                                    fullWidth
-                                    name={"bmi"}
-                                    label="BMI*"
-                                    placeholder=""
-                                    {...register("bmi")}
-                                ></TextField>
-                                <TextField
-                                    type="date"
-                                    fullWidth
-                                    name={"prediction_date"}
-                                    placeholder="prediction date"
-                                    {...register("prediction_date")}
-                                ></TextField>
+                                <div>
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="Total Number of High Days*"
+                                        placeholder=""
+                                        {...register("total_num_of_high_days")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Total number of days with high fertility signs</i>
+                                    </small>
+                                </div>
+
+                                <div>
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="Total Number of Peak Days*"
+                                        placeholder=""
+                                        {...register("total_num_of_peak_days")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Total number of peak fertility days</i>
+                                    </small>
+                                </div>
+
+                                <div>
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="Total Fertility Days*"
+                                        placeholder=""
+                                        {...register("total_days_of_fertility")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Total number of fertile days in your cycle</i>
+                                    </small>
+                                </div>
+
+                                <div>
+                                    <TextField
+                                        type="number"
+                                        fullWidth
+                                        label="BMI*"
+                                        placeholder=""
+                                        {...register("bmi")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Your Body Mass Index (BMI)</i>
+                                    </small>
+                                </div>
+                                <div>
+                                    <TextField
+                                        type="date"
+                                        fullWidth
+                                        label="Prediction Date*"
+                                        placeholder="Prediction date"
+                                        {...register("prediction_date")}
+                                    ></TextField>
+                                    <small>
+                                        <i>Select the date to start predictions from</i>
+                                    </small>
+                                </div>
 
                                 <Button className={styles["btn"]} type="submit">
                                     Submit

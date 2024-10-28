@@ -37,7 +37,6 @@ const Routers = () => {
         <Route path="/" element={<HomeLayer />} />
         <Route path="/login" element={<LoginLayer />} />
         <Route path="/register" element={<RegisterLayer />} />
-        <Route path="/about" element={<AboutUsLayer />} />
         <Route path="/contact-us" element={<ContactUsLayer />} />
         <Route path="/FAQ" element={<FAQLayer />} />
         {/* <Route path="/verify-otp" element={<OTP/>}/> */}

@@ -23,11 +23,11 @@ const FooterLayer = () => {
 
                     <Grid item md={3}>
                         <Stack gap={4}>
-                            
+
                             {/* <SearchBar /> */}
                             <div>
                                 <p className={styles['info']}>Contact Info</p>
-                                
+
                             </div>
                         </Stack>
                     </Grid>
@@ -37,7 +37,6 @@ const FooterLayer = () => {
                             Customer Care
                         </p>
                         <p className={styles["customer-care-item"]} onClick={() => navigate('/contact-us')}>Contact</p>
-                        <p className={styles["customer-care-item"]} onClick={() => navigate('/about')}>About</p>
                         <p className={styles["customer-care-item"]} onClick={() => navigate('/faq')}>FAQ</p>
                     </Grid>
                     <Grid item md={3}>
